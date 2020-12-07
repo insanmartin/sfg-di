@@ -11,10 +11,19 @@ import guru.springframework.sfgdi.services.PetService;
 @Controller
 public class PetController {
 
-	@Autowired
-    private PetService petService;
 
-    public String whichPetIsTheBest(){
+    private final PetService petService;
+
+    //no necesario pq ya se pone por defecto
+    @Autowired
+    public PetController(PetService petService) {
+		super();
+		this.petService = petService;
+	}
+
+
+
+	public String whichPetIsTheBest(){
         return petService.getPetType();
     }
 }

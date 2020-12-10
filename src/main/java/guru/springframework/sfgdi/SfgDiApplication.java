@@ -3,6 +3,7 @@ package guru.springframework.sfgdi;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.ComponentScan;
 
 import guru.springframework.sfgdi.controllers.ConstructorInjectedController;
 import guru.springframework.sfgdi.controllers.I18nController;
@@ -11,6 +12,7 @@ import guru.springframework.sfgdi.controllers.PropertyInjectedController;
 import guru.springframework.sfgdi.controllers.SetterInjectedController;
 
 @SpringBootApplication
+@ComponentScan( basePackages = { "guru.services", "guru.springframework" } )
 public class SfgDiApplication {
 
 	public static void main(String[] args) {

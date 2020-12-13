@@ -1,12 +1,10 @@
-hola: adios
-
 guru:
   jms:
-    username3: John3
+    username3: John3-yml
     password3: sompass3
     
 ---
 spring:  profiles: DEguru:
   jms:
-    username2: JohnGermanYml
+    username3: JohnGermanYml
     password3: sompass3

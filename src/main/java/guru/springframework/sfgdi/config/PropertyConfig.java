@@ -56,12 +56,8 @@ public class PropertyConfig
 	String jmsUsername2;
 
 	//desde aqui ejemplo usa application.yml (defecto)
-	//@Value( "${guru.username2}" )
-	//String user2;
-
-	//@Value( "${guru.jms.username3}" )
-	//@Value( "${hola}" )
-	//String jmsUsername3;
+	@Value( "${guru.jms.username3}" )
+	String jmsUsername3;
 	
 	
 	//Genera un bean de Spring con la configuracion sacada del properties
@@ -85,8 +81,8 @@ public class PropertyConfig
 	{
 		FakeJmsBroker fakeJmsBroker = new FakeJmsBroker();
 		//fakeJmsBroker.setUsername( jmsUsername );
-		fakeJmsBroker.setUsername( jmsUsername2 );
-		//fakeJmsBroker.setUsername( jmsUsername3 );
+		//fakeJmsBroker.setUsername( jmsUsername2 );
+		fakeJmsBroker.setUsername( jmsUsername3 );
 		fakeJmsBroker.setPassword( jmsPassword );
 		fakeJmsBroker.setUrl( jmsUrl );
 		

@@ -16,12 +16,13 @@ import guru.springframework.sfgdi.examplebeans.FakeJmsBroker;
 //@PropertySource( { "classpath:datasource.properties", "jms.properties" } )
 @PropertySources( {
 	@PropertySource( "classpath:datasource.properties" ),
-	@PropertySource( "jms.properties" )
+	@PropertySource( "classpath:jms.properties" )
 } )
 public class PropertyConfig 
 {
 	//para que enlace el valor con la propiedad (campo) del fichero de propiedades
 	//variables de properties datasource.properties
+	
 	@Value( "${guru.username}" )
 	String user;
 	
@@ -46,7 +47,7 @@ public class PropertyConfig
 	
 	@Value( "${guru.jms.url}" )
 	String jmsUrl;
-	
+
 	//desde aqui ejemplo usa application.properties (defecto)
 	@Value( "${guru.username2}" )
 	String user2;
@@ -54,6 +55,13 @@ public class PropertyConfig
 	@Value( "${guru.jms.username2}" )
 	String jmsUsername2;
 
+	//desde aqui ejemplo usa application.yml (defecto)
+	//@Value( "${guru.username2}" )
+	//String user2;
+
+	//@Value( "${guru.jms.username3}" )
+	//@Value( "${hola}" )
+	//String jmsUsername3;
 	
 	
 	//Genera un bean de Spring con la configuracion sacada del properties
@@ -78,6 +86,7 @@ public class PropertyConfig
 		FakeJmsBroker fakeJmsBroker = new FakeJmsBroker();
 		//fakeJmsBroker.setUsername( jmsUsername );
 		fakeJmsBroker.setUsername( jmsUsername2 );
+		//fakeJmsBroker.setUsername( jmsUsername3 );
 		fakeJmsBroker.setPassword( jmsPassword );
 		fakeJmsBroker.setUrl( jmsUrl );
 		

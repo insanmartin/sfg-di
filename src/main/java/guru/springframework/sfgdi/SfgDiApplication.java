@@ -23,6 +23,7 @@ public class SfgDiApplication {
 		
 		FakeDataSource fakeDAtaSource = (FakeDataSource) ctx.getBean( FakeDataSource.class );
 		System.out.println( fakeDAtaSource.getPath() );
+		System.out.println( fakeDAtaSource.getUser() );
 
 		
 		

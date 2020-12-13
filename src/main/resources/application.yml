@@ -1,0 +1,13 @@
+hola: adios
+
+guru:
+  jms:
+    username3: John3
+    password3: sompass3
+    
+---
+
+spring:  profiles: DEguru:
+  jms:
+    username2: JohnGermanYml
+    password3: sompass3
